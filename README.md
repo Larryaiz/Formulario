@@ -31,6 +31,7 @@ Aula 9 - Automacao/
 └── settings.json # Configurações locais do VSCode (opcional)
 
 ---
+---
 
 ## ⚙️ Instalação e Configuração
 
@@ -166,4 +167,5 @@ time.sleep(10)
 antes do context.driver.quit() no step final.
 
 🧠 “Automatizar é transformar o conhecimento humano em eficiência digital.”
+
 — Dione Braga Ferreira
