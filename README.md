@@ -1,6 +1,6 @@
 # 🤖 Aula 9 – Automação de Testes com Python, Behave e Selenium
 
-### Facilitadores: **Dione Braga Ferreira** e **Diony Costa**
+### Facilitadores: **Dione Braga** e **Diony Costa**
 
 ---
 
