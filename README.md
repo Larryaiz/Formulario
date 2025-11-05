@@ -1,6 +1,8 @@
 # 🤖 Aula 9 – Automação de Testes com Python, Behave e Selenium
 
-### Facilitadores: **Dione Braga** e **Diony Costa**
+### ✍️ Facilitadores  
+**Dione Braga**  
+**Diony Costa**
 
 ---
 
@@ -47,7 +49,7 @@ cd "Aula 9 - Automacao"
 
 ```powershell
 python -m venv venv
-.env\Scripts\Activate.ps1
+.venv\Scripts\Activate.ps1
 ```
 
 💡 *O ambiente virtual (venv) isola as bibliotecas do projeto para evitar conflitos.*
@@ -275,6 +277,4 @@ Nesta aula você aprendeu a:
 
 ---
 
-### ✍️ Facilitadores  
-**Dione Braga Ferreira**  
-**Diony Costa**
+
