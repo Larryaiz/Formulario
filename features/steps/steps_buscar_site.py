@@ -32,13 +32,16 @@ def preencher_formulario(context):
     d.find_element(By.NAME, "telefone").clear()
     d.find_element(By.NAME, "telefone").send_keys("11-967077283")
     time.sleep(4)
+    d.find_element(By.XPATH, "/html/body/div/div/form/div[2]/div[2]/select").click()
+    d.find_element(By.XPATH, "/html/body/div/div/form/div[2]/div[2]/select/option[2]").click()
+    time.sleep(4)
     d.find_element(By.NAME, "bairro").clear()
     d.find_element(By.NAME, "bairro").send_keys("Barra velha alta")
     time.sleep(4)
     d.find_element(By.XPATH, "/html/body/div/div/form/div[3]/label[2]/input").click()
     time.sleep(4)
     d.find_element(By.NAME, "mensagem").clear()
-    d.find_element(By.NAME, "mensagem").send_keys("Olá, essa é uma mensagem de teste")
+    d.find_element(By.NAME, "mensagem").send_keys("Olá, essa é uma mensagem de teste.")
     time.sleep(4)
 
 #Então
@@ -48,7 +51,8 @@ def step_send(context):
     sucess = d.find_element(By.XPATH, "/html/body/div/div/form/button").click()
     time.sleep(5)
     if sucess:
-        print("formulário enviado com sucesso")
+        print("Formulário enviado com sucesso")
     else:
         print("Algo deu errado. Formulário não enviado.")
+    context.driver.save_screenshot("evidence_qr.png")
     context.driver.quit()
