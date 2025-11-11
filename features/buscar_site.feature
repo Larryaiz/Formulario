@@ -1,7 +1,7 @@
 # language: pt
-Funcionalidade: Acessar o site do Instituto Joga Junto pelo Google
+Funcionalidade: Preencher um formulário
 
-  Cenário: Usuário realiza a busca e acessa o site com sucesso
-    Dado que o navegador Microsoft Edge está aberto
-    Quando eu pesquisar por "Instituto Joga Junto" no Google
-    Então devo ver o site do Instituto aberto com sucesso
+  Cenário: Preencher e enviar formulário
+    Dado que o navegador Microsoft Edge está aberto e no formulário
+    Quando eu preencher os campos
+    Então devo enviar o formulário preenchido
