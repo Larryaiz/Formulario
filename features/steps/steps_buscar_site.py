@@ -1,3 +1,5 @@
+#Bibliotecas
+
 from behave import given, when, then  
 from selenium.webdriver import Edge  
 from selenium.webdriver.edge.options import Options  
@@ -5,7 +7,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys  
 import time  
 
-
+#Dado
 @given("que o navegador Microsoft Edge está aberto e no formulário")
 def step_open_browser(context):
 
@@ -17,6 +19,7 @@ def step_open_browser(context):
     context.driver.get("https://formulario-contato-m8p8.onrender.com/")
     time.sleep(3)
 
+#Quando
 @when('eu preencher os campos')
 def preencher_formulario(context):
     d = context.driver
@@ -38,9 +41,14 @@ def preencher_formulario(context):
     d.find_element(By.NAME, "mensagem").send_keys("Olá, essa é uma mensagem de teste")
     time.sleep(4)
 
+#Então
 @then("devo enviar o formulário preenchido")
 def step_send(context):
     d = context.driver
-    d.find_element(By.XPATH, "/html/body/div/div/form/button").click()
+    sucess = d.find_element(By.XPATH, "/html/body/div/div/form/button").click()
     time.sleep(5)
+    if sucess:
+        print("formulário enviado com sucesso")
+    else:
+        print("Algo deu errado. Formulário não enviado.")
     context.driver.quit()
